@@ -28,7 +28,7 @@ The theme includes:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/jsonresume-theme-bootstrap5-professional.git
+git clone https://github.com/JamesShaver/jsonresume-theme-bootstrap5-professional.git
 cd jsonresume-theme-bootstrap5-professional
 
 # Install dependencies
