@@ -1,0 +1,21 @@
+{
+  "name": "jsonresume-theme-bootstrap5-professional",
+  "version": "1.0.0",
+  "description": "Professional Bootstrap 5 theme for JSON Resume with sticky sidebar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jsonresume",
+    "theme",
+    "bootstrap5",
+    "professional",
+    "resume"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}

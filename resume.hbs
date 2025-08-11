@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#if resume.basics.name}}{{resume.basics.name}} - Resume{{else}}Resume{{/if}}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        {{{css}}}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sticky Sidebar -->
+            <aside class="col-lg-3 col-md-4 sidebar sticky-top vh-100 overflow-auto">
+                <div class="profile-section text-center py-4">
+                    {{#if resume.basics}}
+                    <!-- Profile Image -->
+                    {{#if resume.basics.image}}
+                    <div class="profile-img-wrapper mb-3">
+                        <img src="{{resume.basics.image}}" alt="{{resume.basics.name}}" class="profile-img rounded-circle">
+                    </div>
+                    {{/if}}
+                    
+                    <!-- Name and Title -->
+                    {{#if resume.basics.name}}
+                    <h2 class="h4 mb-1 text-white">{{resume.basics.name}}</h2>
+                    {{/if}}
+                    {{#if resume.basics.label}}
+                    <p class="text-light mb-4">{{resume.basics.label}}</p>
+                    {{/if}}
+                    
+                    <!-- Contact Information -->
+                    <div class="contact-info text-start px-3">
+                        {{#if resume.basics.email}}
+                        <div class="contact-item mb-3">
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            <a href="mailto:{{resume.basics.email}}" class="text-light text-decoration-none">{{resume.basics.email}}</a>
+                        </div>
+                        {{/if}}
+                        
+                        {{#if resume.basics.phone}}
+                        <div class="contact-item mb-3">
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            <a href="tel:{{resume.basics.phone}}" class="text-light text-decoration-none">{{phoneFormat resume.basics.phone}}</a>
+                        </div>
+                        {{/if}}
+                        
+                        {{#if resume.basics.location}}
+                        <div class="contact-item mb-3">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            <span class="text-light">
+                                {{#if resume.basics.location.city}}{{resume.basics.location.city}}{{/if}}{{#if resume.basics.location.region}}, {{resume.basics.location.region}}{{/if}}
+                                {{#if resume.basics.location.countryCode}}<br>{{resume.basics.location.countryCode}}{{/if}}
+                            </span>
+                        </div>
+                        {{/if}}
+                        
+                        {{#if resume.basics.url}}
+                        <div class="contact-item mb-3">
+                            <i class="bi bi-globe me-2"></i>
+                            <a href="{{resume.basics.url}}" class="text-light text-decoration-none" target="_blank">{{resume.basics.url}}</a>
+                        </div>
+                        {{/if}}
+                    </div>
+                    
+                    <!-- Social Links -->
+                    {{#if resume.basics.profiles}}
+                    <div class="social-links mt-4">
+                        <h5 class="text-light mb-3">Connect</h5>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            {{#each resume.basics.profiles}}
+                            <a href="{{this.url}}" class="social-link" title="{{this.network}}" target="_blank">
+                                <i class="bi {{socialIcon this.network}}"></i>
+                            </a>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+                    
+                    <!-- Languages -->
+                    {{#if resume.languages}}
+                    <div class="languages-section mt-4 px-3">
+                        <h5 class="text-light mb-3">Languages</h5>
+                        {{#each resume.languages}}
+                        <div class="language-item mb-2">
+                            <span class="text-light">{{this.language}}</span>
+                            {{#if this.fluency}}
+                            <span class="text-muted ms-2">{{this.fluency}}</span>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                    
+                    <!-- Interests -->
+                    {{#if resume.interests}}
+                    <div class="interests-section mt-4 px-3">
+                        <h5 class="text-light mb-3">Interests</h5>
+                        <div class="interest-tags">
+                            {{#each resume.interests}}
+                            <span class="badge bg-dark mb-2">{{this.name}}</span>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="col-lg-9 col-md-8 main-content">
+                <div class="container py-5">
+                    <!-- Summary Section -->
+                    {{#if resume.basics.summary}}
+                    <section class="summary-section mb-5">
+                        <h2 class="section-title mb-3">
+                            <i class="bi bi-person-circle me-2"></i>
+                            Professional Summary
+                        </h2>
+                        <p class="lead">{{resume.basics.summary}}</p>
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Experience Section -->
+                    {{#if resume.work}}
+                    <section class="experience-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-briefcase-fill me-2"></i>
+                            Work Experience
+                        </h2>
+                        
+                        {{#each resume.work}}
+                        <div class="company-group mb-4">
+                            {{#if this.roles}}
+                            <!-- Company with multiple roles -->
+                            <div class="company-header mb-3">
+                                <h4 class="company-name text-primary mb-0">
+                                    {{#if this.url}}
+                                    <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                                    {{else}}
+                                    {{this.name}}
+                                    {{/if}}
+                                </h4>
+                            </div>
+                            {{#each this.roles}}
+                            <div class="experience-item role-item mb-3 ms-3">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h5 class="mb-1">{{this.position}}</h5>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <span class="badge bg-primary">{{dateRange this.startDate this.endDate}}</span>
+                                    </div>
+                                </div>
+                                {{#if this.summary}}
+                                <p class="mt-2 text-muted">{{this.summary}}</p>
+                                {{/if}}
+                                {{#if this.highlights}}
+                                <ul class="mt-2">
+                                    {{#each this.highlights}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </div>
+                            {{/each}}
+                            {{else}}
+                            <!-- Single role company (backward compatibility) -->
+                            <div class="experience-item mb-4">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h4 class="mb-1">{{this.position}}</h4>
+                                        <h5 class="text-primary mb-2">
+                                            {{#if this.url}}
+                                            <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                                            {{else}}
+                                            {{this.name}}
+                                            {{/if}}
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-4 text-md-end">
+                                        <span class="badge bg-primary">{{dateRange this.startDate this.endDate}}</span>
+                                    </div>
+                                </div>
+                                {{#if this.summary}}
+                                <p class="mt-2 text-muted">{{this.summary}}</p>
+                                {{/if}}
+                                {{#if this.highlights}}
+                                <ul class="mt-2">
+                                    {{#each this.highlights}}
+                                    <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </div>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Volunteer Section -->
+                    {{#if resume.volunteer}}
+                    <section class="volunteer-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-heart-fill me-2"></i>
+                            Volunteer Experience
+                        </h2>
+                        
+                        {{#each resume.volunteer}}
+                        <div class="experience-item mb-4">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h4 class="mb-1">{{this.position}}</h4>
+                                    <h5 class="text-primary mb-2">
+                                        {{#if this.url}}
+                                        <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.organization}}</a>
+                                        {{else}}
+                                        {{this.organization}}
+                                        {{/if}}
+                                    </h5>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <span class="badge bg-success">{{dateRange this.startDate this.endDate}}</span>
+                                </div>
+                            </div>
+                            {{#if this.summary}}
+                            <p class="mt-2 text-muted">{{this.summary}}</p>
+                            {{/if}}
+                            {{#if this.highlights}}
+                            <ul class="mt-2">
+                                {{#each this.highlights}}
+                                <li>{{this}}</li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Education Section -->
+                    {{#if resume.education}}
+                    <section class="education-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-mortarboard-fill me-2"></i>
+                            Education
+                        </h2>
+                        
+                        {{#each resume.education}}
+                        <div class="education-item mb-3">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h4 class="mb-1">{{this.studyType}}{{#if this.area}} in {{this.area}}{{/if}}</h4>
+                                    <h5 class="text-primary">
+                                        {{#if this.url}}
+                                        <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.institution}}</a>
+                                        {{else}}
+                                        {{this.institution}}
+                                        {{/if}}
+                                    </h5>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <span class="badge bg-secondary">{{dateRange this.startDate this.endDate}}</span>
+                                </div>
+                            </div>
+                            {{#if this.score}}
+                            <p class="mt-2 mb-0">GPA: {{this.score}}</p>
+                            {{/if}}
+                            {{#if this.courses}}
+                            <div class="mt-2">
+                                <strong>Relevant Courses:</strong>
+                                {{#each this.courses}}
+                                <span class="badge bg-light text-dark me-1">{{this}}</span>
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Projects Section -->
+                    {{#if resume.projects}}
+                    <section class="projects-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-code-square me-2"></i>
+                            Projects
+                        </h2>
+                        
+                        <div class="row">
+                            {{#each resume.projects}}
+                            <div class="col-md-6 mb-3">
+                                <div class="card project-card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            {{#if this.url}}
+                                            <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                                            {{else}}
+                                            {{this.name}}
+                                            {{/if}}
+                                        </h5>
+                                        {{#if this.description}}
+                                        <p class="card-text">{{this.description}}</p>
+                                        {{/if}}
+                                        {{#if this.highlights}}
+                                        <ul class="small">
+                                            {{#each this.highlights}}
+                                            <li>{{this}}</li>
+                                            {{/each}}
+                                        </ul>
+                                        {{/if}}
+                                        {{#if this.keywords}}
+                                        <div class="project-tech">
+                                            {{#each this.keywords}}
+                                            <span class="badge bg-info me-1">{{this}}</span>
+                                            {{/each}}
+                                        </div>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Skills Section -->
+                    {{#if resume.skills}}
+                    <section class="skills-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-gear-fill me-2"></i>
+                            Skills & Expertise
+                        </h2>
+                        
+                        <div class="row">
+                            {{#each resume.skills}}
+                            <div class="col-md-6 mb-4">
+                                <div class="skill-category">
+                                    <h5 class="skill-category-title mb-3">
+                                        {{this.name}}
+                                        {{#if this.level}}
+                                        <span class="badge bg-primary ms-2">{{this.level}}</span>
+                                        {{/if}}
+                                    </h5>
+                                    <div class="skill-tags">
+                                        {{#if this.keywords}}
+                                            {{#each this.keywords}}
+                                            <span class="badge bg-light text-dark me-2 mb-2">{{this}}</span>
+                                            {{/each}}
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Awards Section -->
+                    {{#if resume.awards}}
+                    <section class="awards-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-trophy-fill me-2"></i>
+                            Awards & Achievements
+                        </h2>
+                        
+                        <div class="row">
+                            {{#each resume.awards}}
+                            <div class="col-md-6 mb-3">
+                                <div class="award-item">
+                                    <i class="bi bi-award-fill text-warning me-2"></i>
+                                    <strong>{{this.title}}</strong>
+                                    {{#if this.awarder}}
+                                    <span class="text-muted ms-2">by {{this.awarder}}</span>
+                                    {{/if}}
+                                    {{#if this.date}}
+                                    <span class="text-muted ms-2">({{formatDate this.date}})</span>
+                                    {{/if}}
+                                    {{#if this.summary}}
+                                    <p class="mt-1 mb-0 small">{{this.summary}}</p>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Certificates Section -->
+                    {{#if resume.certificates}}
+                    <section class="certificates-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-patch-check-fill me-2"></i>
+                            Certifications
+                        </h2>
+                        
+                        <div class="row">
+                            {{#each resume.certificates}}
+                            <div class="col-md-6 mb-3">
+                                <div class="certification-item">
+                                    <i class="bi bi-patch-check-fill text-success me-2"></i>
+                                    <strong>
+                                        {{#if this.url}}
+                                        <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                                        {{else}}
+                                        {{this.name}}
+                                        {{/if}}
+                                    </strong>
+                                    {{#if this.issuer}}
+                                    <span class="text-muted ms-2">{{this.issuer}}</span>
+                                    {{/if}}
+                                    {{#if this.date}}
+                                    <span class="text-muted ms-2">({{formatDate this.date}})</span>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </section>
+                    {{/if}}
+                    
+                    <!-- Publications Section -->
+                    {{#if resume.publications}}
+                    <section class="publications-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-journal-text me-2"></i>
+                            Publications
+                        </h2>
+                        
+                        {{#each resume.publications}}
+                        <div class="publication-item mb-3">
+                            <h5>
+                                {{#if this.url}}
+                                <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                                {{else}}
+                                {{this.name}}
+                                {{/if}}
+                            </h5>
+                            {{#if this.publisher}}
+                            <p class="mb-1"><strong>{{this.publisher}}</strong>
+                            {{#if this.releaseDate}}
+                            <span class="text-muted ms-2">{{formatDate this.releaseDate}}</span>
+                            {{/if}}
+                            </p>
+                            {{/if}}
+                            {{#if this.summary}}
+                            <p class="text-muted">{{this.summary}}</p>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    </section>
+                    {{/if}}
+                    
+                    <!-- References Section -->
+                    {{#if resume.references}}
+                    <section class="references-section mb-5">
+                        <h2 class="section-title mb-4">
+                            <i class="bi bi-people-fill me-2"></i>
+                            References
+                        </h2>
+                        
+                        <div class="row">
+                            {{#each resume.references}}
+                            <div class="col-md-6 mb-3">
+                                <div class="card reference-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this.name}}</h5>
+                                        <p class="card-text">{{this.reference}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </section>
+                    {{/if}}
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
