@@ -1,14 +1,15 @@
 {
 	"meta": {
 		"favicon": {
-			"image": "/assets/images/favicon.svg",
+			"image": "assets/images/favicon.svg",
 			"type": "image/svg+xml"
 		}
 	},
     "basics": {
         "name": "James Shaver",
         "label": "Senior Technical Account Manager",
-        "picture": "/assets/images/profile.png",
+        "url": "https://jshaver.me",
+        "image": "assets/images/profile.png",
         "email": "contact@jshaver.me",
         "phone": "(503)610-0832",
         "website": "https://jshaver.me",
@@ -41,9 +42,7 @@
                 "username": "James",
                 "url": "https://stackoverflow.com/users/2844703/james"
             }
-        ],
-        "url": "https://jshaver.me",
-        "image": "https://jshaver.me/assets/images/profile.webp"
+        ]
     },
     "work": [
         {
