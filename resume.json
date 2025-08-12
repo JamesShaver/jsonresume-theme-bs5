@@ -226,20 +226,7 @@
             ]
         }
     ],
-    "volunteer": [
-        {
-            "organization": "Code for Good",
-            "position": "Technical Lead",
-            "url": "https://codeforgood.org",
-            "startDate": "2019-01-01",
-            "summary": "Leading development of open-source projects for non-profit organizations.",
-            "highlights": [
-                "Built donation platform that raised $500K+ for local charities",
-                "Mentored 20+ volunteer developers on best practices",
-                "Organized monthly coding workshops for underrepresented groups"
-            ]
-        }
-    ],
+    "volunteer": [],
     "education": [
         {
             "institution": "Washington State University",
