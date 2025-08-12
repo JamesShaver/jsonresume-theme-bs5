@@ -81,7 +81,7 @@ function render(resume) {
     registerPartials();
     
     // Load CSS file
-    const css = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf-8');
+    const css = fs.readFileSync(path.join(__dirname, 'assets/css/style.css'), 'utf-8');
     
     // Load template
     const template = fs.readFileSync(path.join(__dirname, 'resume.hbs'), 'utf-8');

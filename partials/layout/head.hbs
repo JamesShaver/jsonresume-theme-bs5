@@ -2,7 +2,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{#if resume.basics.name}}{{resume.basics.name}} - Resume{{else}}Resume{{/if}}</title>
-    
+
+    {{#if resume.meta.favicon.image}}
+    <!-- Favicon -->
+    <link rel="icon" type="{{resume.meta.favicon.type}}" href="{{resume.meta.favicon.image}}">
+    {{/if}}
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
