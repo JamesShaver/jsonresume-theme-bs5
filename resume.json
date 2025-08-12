@@ -1,10 +1,14 @@
 {
-	"meta": {
-		"favicon": {
-			"image": "assets/images/favicon.svg",
-			"type": "image/svg+xml"
-		}
-	},
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "meta": {
+        "favicon": {
+            "image": "assets/images/favicon.svg",
+            "type": "image/svg+xml"
+        },
+        "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/sample.resume.json",
+        "version": "v1.0.0",
+        "lastModified": "2017-12-24T15:53:00"
+    },
     "basics": {
         "name": "James Shaver",
         "label": "Senior Technical Account Manager",
@@ -237,7 +241,7 @@
             "endDate": "2015-05-31",
             "courses": []
         },
-		{
+        {
             "institution": "ITT Technical Institute",
             "area": "Computer Information Sciences",
             "studyType": "Associate of Arts",
@@ -342,16 +346,15 @@
         {
             "name": "Hiking"
         },
-		{
+        {
             "name": "Snowboarding"
         },
-		{
+        {
             "name": "Cooking"
         },
-		{
+        {
             "name": "Travel"
         }
-		
     ],
     "references": [],
     "projects": [
@@ -364,9 +367,8 @@
                 "Hono",
                 "NPM",
                 "Cloudflare",
-				"Wrangler",
-				"Github"
-			
+                "Wrangler",
+                "Github"
             ],
             "startDate": "2024-01-01",
             "endDate": "2022-06-30",
@@ -385,8 +387,8 @@
             "keywords": [
                 "JavaScript",
                 "Github",
-				"Cloudflare",
-				"Wrangler",
+                "Cloudflare",
+                "Wrangler",
                 "ResellerClub"
             ],
             "startDate": "2024-09-01",
@@ -398,21 +400,21 @@
             "entity": "Open Source",
             "type": "application"
         },
-		{
+        {
             "name": "Joomla Development",
             "description": "Working on a component/module/plugin combination to create a Joomla platform for white-label web hosting and domain name sales through a REST API backend service, as well utilizing a payment gateway library to handle sales.",
             "highlights": [],
             "keywords": [
-				"Joomla",
+                "Joomla",
                 "PHP",
                 "MySql",
-				"Apache",
-				"Nginx",
-				"HTML",
-				"Visual Studio Code",
-				"REST API",
-				"Postman",
-				"Github",
+                "Apache",
+                "Nginx",
+                "HTML",
+                "Visual Studio Code",
+                "REST API",
+                "Postman",
+                "Github",
                 "ResellerClub"
             ],
             "startDate": "2001-09-01",
@@ -423,19 +425,19 @@
             "entity": "Open Source",
             "type": "application"
         },
-		{
+        {
             "name": "Family Blogs",
             "description": "Developed and maintained themes and plugins for our family's self-hosted Wordpress blogs.",
             "highlights": [],
             "keywords": [
-				"WordPress",
+                "WordPress",
                 "PHP",
                 "MySql",
-				"Apache",
-				"Nginx",
-				"HTML",
-				"Visual Studio Code",
-				"Github"
+                "Apache",
+                "Nginx",
+                "HTML",
+                "Visual Studio Code",
+                "Github"
             ],
             "startDate": "2005-01-01",
             "roles": [
@@ -445,16 +447,16 @@
             "entity": "Open Source",
             "type": "application"
         },
-		{
+        {
             "name": "Self-Learning CNC Routing",
             "description": "Currently learning about 3D modeling and CNC routing with a tabletop CNC router and Fusion360 software",
             "highlights": [],
             "keywords": [
-				"Genmitsu CNC 3018-PRO Router",
+                "Genmitsu CNC 3018-PRO Router",
                 "Autodesk Fusion 360",
                 "Gimp",
-				"Carbide Create",
-				"Inkscape"
+                "Carbide Create",
+                "Inkscape"
             ],
             "startDate": "2023-01-01",
             "roles": [
