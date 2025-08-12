@@ -1,0 +1,16 @@
+{{#if resume.basics}}
+<!-- Profile Image -->
+{{#if resume.basics.image}}
+<div class="profile-img-wrapper mb-3">
+    <img src="{{resume.basics.image}}" alt="{{resume.basics.name}}" class="profile-img rounded-circle">
+</div>
+{{/if}}
+
+<!-- Name and Title -->
+{{#if resume.basics.name}}
+<h2 class="h4 mb-1 text-white">{{resume.basics.name}}</h2>
+{{/if}}
+{{#if resume.basics.label}}
+<p class="text-light mb-4">{{resume.basics.label}}</p>
+{{/if}}
+{{/if}}

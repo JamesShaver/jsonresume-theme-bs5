@@ -1,0 +1,11 @@
+{{#if resume.interests}}
+<!-- Interests -->
+<div class="interests-section mt-4 px-3">
+    <h5 class="text-light mb-3">Interests</h5>
+    <div class="interest-tags">
+        {{#each resume.interests}}
+        <span class="badge bg-dark mb-2">{{this.name}}</span>
+        {{/each}}
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,40 @@
+{{#if resume.education}}
+<!-- Education Section -->
+<section class="education-section mb-5" id="education">
+    <h2 class="section-title mb-4">
+        <i class="bi bi-mortarboard-fill me-2"></i>
+        Education
+    </h2>
+    
+    {{#each resume.education}}
+    <div class="education-item mb-3">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="mb-1">{{this.studyType}}{{#if this.area}} in {{this.area}}{{/if}}</h4>
+                <h5 class="text-primary">
+                    {{#if this.url}}
+                    <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.institution}}</a>
+                    {{else}}
+                    {{this.institution}}
+                    {{/if}}
+                </h5>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <span class="badge bg-secondary">{{dateRange this.startDate this.endDate}}</span>
+            </div>
+        </div>
+        {{#if this.score}}
+        <p class="mt-2 mb-0">GPA: {{this.score}}</p>
+        {{/if}}
+        {{#if this.courses}}
+        <div class="mt-2">
+            <strong>Relevant Courses:</strong>
+            {{#each this.courses}}
+            <span class="badge bg-light text-dark me-1">{{this}}</span>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+</section>
+{{/if}}

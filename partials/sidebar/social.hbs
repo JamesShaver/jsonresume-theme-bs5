@@ -1,0 +1,13 @@
+{{#if resume.basics.profiles}}
+<!-- Social Links -->
+<div class="social-links mt-4">
+    <h5 class="text-light mb-3">Connect</h5>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+        {{#each resume.basics.profiles}}
+        <a href="{{this.url}}" class="social-link" title="{{this.network}}" target="_blank">
+            <i class="bi {{socialIcon this.network}}"></i>
+        </a>
+        {{/each}}
+    </div>
+</div>
+{{/if}}

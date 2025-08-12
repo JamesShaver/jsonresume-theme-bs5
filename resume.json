@@ -1,95 +1,219 @@
 {
     "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
-      "basics": {
-    "name": "James Shaver",
-    "label": "Senior Technical Account Manager",
-    "picture": "https://jshaver.me/assets/images/profile.png",
-    "email": "contact@jshaver.me",
-    "phone": "(503)610-0832",
-    "website": "https://jshaver.me",
-    "summary": "Organized and goal-oriented, fully committed to providing the highest possible standards of customer service and support. Analytical problem-solver, able to anticipate issues and define processes to resolve concerns and improve efficiency. Highly skilled in building client / team member relationships. Able to see the big picture, delegate effectively and motivate team members to achieve project completion on time. ",
-    "location": {
-      "address": "",
-      "postalCode": "97132",
-      "city": "Newberg",
-      "countryCode": "US",
-      "region": "Oregon"
+    "basics": {
+        "name": "James Shaver",
+        "label": "Senior Technical Account Manager",
+        "picture": "https://jshaver.me/assets/images/profile.png",
+        "email": "contact@jshaver.me",
+        "phone": "(503)610-0832",
+        "website": "https://jshaver.me",
+        "summary": "Organized and goal-oriented, fully committed to providing the highest possible standards of customer service and support. Analytical problem-solver, able to anticipate issues and define processes to resolve concerns and improve efficiency. Highly skilled in building client / team member relationships. Able to see the big picture, delegate effectively and motivate team members to achieve project completion on time. ",
+        "location": {
+            "address": "",
+            "postalCode": "97132",
+            "city": "Newberg",
+            "countryCode": "US",
+            "region": "Oregon"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "jamesdshaver",
+                "url": "https://www.linkedin.com/in/jamesdshaver"
+            },
+            {
+                "network": "GitHub",
+                "username": "shavertech",
+                "url": "https://codepen.io/shavertech"
+            },
+            {
+                "network": "CodePen",
+                "username": "JamesShaver",
+                "url": "https://github.com/JamesShaver"
+            }
+        ],
+        "url": "https://jshaver.me",
+        "image": "https://jshaver.me/assets/images/profile.webp"
     },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "jamesdshaver",
-        "url": "https://www.linkedin.com/in/jamesdshaver"
-      },
-      {
-        "network": "GitHub",
-        "username": "shavertech",
-        "url": "https://codepen.io/shavertech"
-      },
-      {
-        "network": "CodePen",
-        "username": "JamesShaver",
-        "url": "https://github.com/JamesShaver"
-      }
-    ],
-    "url": "https://jshaver.me",
-    "image": "https://jshaver.me/assets/images/profile.webp"
-  },
     "work": [
         {
-            "name": "TechCorp Solutions",
-            "url": "https://techcorp.example.com",
+            "name": "Docusign",
+            "url": "https://docusign.com",
+            "location": "Portland, Oregon",
+            "position": "Senior Technical Account Manager (Sr. TAM)",
+            "startDate": "2023-03-01",
+            "highlights": [
+                "Technical Relationship Management: Managed and cultivated technical relationships with Enterprise Premier accounts, acting as the primary technical contact and ensuring overall account health.",
+                "Issue Resolution & Advocacy: Led resolution efforts for complex production issues, including escalations, system testing, and strategic planning. Represented customer needs within DocuSign to advocate for prioritization of requests in release cycles.",
+                "Cross-Functional Collaboration: Partnered with internal teams such as Engineering, Product Management, Sales, and Professional Services to drive customer adoption, loyalty, and satisfaction.",
+                "Proactive Recommendations: Delivered tailored technical recommendations, including training and insights on advanced features, APIs, and deployment strategies.",
+                "Operational Metrics Excellence: Consistently achieved Service Level Agreement and Customer Satisfaction (CSAT) targets by effectively managing incidents and fostering engagement.",
+                "Leadership & Mentorship: Inspired colleagues and provided mentorship while championing strategic improvements and promoting the Enterprise Premier Support program.",
+                "Technical Expertise: Leveraged expertise in Docusign integrations (e.g., Salesforce, SharePoint), products (Connect, PowerForms, API), and technologies (XML/JSON, REST/SOAP APIs, HTML, CSS, Node.js) to tackle diverse technical challenges."
+            ]
+        },
+        {
+            "name": "TalentNet",
+            "position": "Customer Success Engineer",
+            "url": "https://talentnet.com",
+            "startDate": "2021-04-01",
+            "endDate": "2023-03-01",
+            "highlights": [
+                "Customer Lifecycle Management: Oversaw key technical areas, including API development, job board integration, and personalized support for diverse customer accounts.",
+                "Technical Advisory Role: Served as a technical resource, providing expertise and guidance to external customers and internal stakeholders alike.",
+                "Scalable Solution Design: Strategized and identified new use cases to simplify processes and deliver scalable solutions across the customer base.",
+                "Cross-Functional Engagement: Collaborated with product, software engineering, and UX teams to guide customer requests and define roadmap priorities.",
+                "Resolution Leadership: Coordinated closely with technical support teams to ensure timely resolution of customer requests and escalations.",
+                "Advocacy and Mentorship: Acted as a customer advocate while fostering team collaboration and providing mentorship to fellow team members."
+            ]
+        },
+        {
+            "name": "fiserv",
+            "position": "Client Technical Support Engineer",
+            "url": "https://fiserv.com",
+            "startDate": "2017-05-01",
+            "endDate": "2021-03-01",
+            "highlights": [
+                "Leadership & Expertise: Served as a team leader and Subject Matter Expert (SME) for the DadePay project, driving training exercises and Knowledgebase article development.",
+                "Support Model Development: Designed, implemented, and maintained the DadePay support model and client readiness documentation, ensuring 100% readiness for initial client requests.",
+                "Cross-Functional Collaboration: Engaged with Development and Product teams to increase visibility into client activity, gather feedback, and address recurring themes to improve quality and reduce case activity.",
+                "Comprehensive Product Support: Provided assistance to clients across all aspects of the various products managed by FRMS.",
+                "Virtual Environment Maintenance: Oversaw the team's client virtual machine pool to ensure availability of client models for testing in comparable environments."
+            ]
+        },
+        {
+            "name": "Nuscale Power",
+            "position": "HRIS Consultant",
+            "url": "https://www.nuscalepower.com",
+            "startDate": "2016-08-01",
+            "endDate": "2017-05-01",
+            "highlights": [
+                "Project Management: Developed and managed five benefit carrier integration projects, from initial design to post-implementation support.",
+                "Application Development: Designed a simplified application for delivering benefit files to carriers, featuring a single-click menu for file generation, delivery via SFTP, and date-stamped archiving on a secured network drive.",
+                "File Auditing & Coordination: Audited files and coordinated efforts with benefit carrier EDI specialists and NuScale team members.",
+                "Automation & Custom Coding: Developed and maintained custom code to automate WorkForceReady for reporting and delivery needs.",
+                "Technical Support: Served as the point person for all Kronos WorkforceReady issues, assisting employees in running reports, understanding workflows, auditing security/group access, and creating tickets as needed."
+            ]
+        },
+        {
+            "name": "BBSI",
+            "position": "Application Support",
+            "url": "https://www.bbsi.com",
+            "startDate": "2015-11-01",
+            "endDate": "2016-02-01",
+            "highlights": [
+                "Provided first-line technical support for branch users across various platforms including HRPyramid, Salesforce, and SpringCM."
+            ]
+        },
+        {
+            "name": "ADP",
+            "url": "https://adp.com",
             "roles": [
                 {
-                    "position": "Senior Full Stack Developer",
-                    "startDate": "2020-01-15",
-                    "summary": "Leading the development of enterprise-scale applications and mentoring a team of 5 developers.",
+                    "position": "Senior Connections Support Specialist",
+                    "startDate": "2013-10-01",
+                    "endDate": "2015-08-01",
                     "highlights": [
-                        "Architected and implemented microservices infrastructure serving 2M+ daily active users",
-                        "Reduced application load time by 60% through performance optimization and code splitting",
-                        "Led migration from monolithic architecture to microservices using Docker and Kubernetes",
-                        "Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes",
-                        "Mentored 5 junior developers and conducted technical interviews"
+                        "File Integration Support: Worked with HR/Benefits and WorkforceNow service teams to enable payroll and benefit enrollment connection files.",
+                        "Technical Training & Support: Provided training and technical support for the integration between ADP HR/Benefits, WorkforceNow, Payroll products, and benefit carriers.",
+                        "Collaboration with EDI Teams: Developed strong relationships with benefit carrier EDI teams, facilitating smoother connection changes.",
+                        "Data File Delivery: Maintained delivery of data files in various formats (XML, JSON, ANSI834 4010/5010, CSV, Tab Delimited) between ADP HR/Benefits and benefit providers to ensure accurate employee benefit plan enrollment.",
+                        "Client Communications: Ensured effective communication with clients, fostering satisfaction and improving retention rates.",
+                        "Issue Resolution: Identified technical issues, replicated errors, and developed effective workarounds.",
+                        "Training & Procedure Development: Trained associates and created new procedures to enhance team efficiency.",
+                        "Web Services & API Support: Implemented access and resolved issues with Web Services and API, utilizing tools like OpenSSL, OpenPGP, SOAP/REST protocols, WSDL files, JSON/XML data, OAuth, and OpenID.",
+                        "Documentation: Actively documented issue identification tips, error resolution strategies, and FAQs related to Web Services and API capabilities.",
+                        "Team Assistance: Provided training and guidance for Web Services/API support while assisting team members with service cases."
                     ]
                 },
                 {
-                    "position": "Full Stack Developer",
-                    "startDate": "2017-06-01",
-                    "endDate": "2019-12-31",
-                    "summary": "Developed and maintained multiple client-facing web applications using React and Node.js.",
+                    "position": "Technical Solutions Consultant",
+                    "startDate": "2012-02-01",
+                    "endDate": "2013-10-01",
                     "highlights": [
-                        "Built real-time collaboration features using WebSockets and Redis",
-                        "Developed RESTful APIs serving 500K+ daily requests",
-                        "Implemented automated testing increasing code coverage from 45% to 85%",
-                        "Integrated payment processing systems handling $10M+ in transactions"
+                        "Client Support: Provided technical assistance to clients for resolving product hardware, software, and operating system issues through phone and remote access for supported applications or products.",
+                        "Issue Analysis: Analyzed client issues to determine resolution feasibility on initial contact or required escalation to second-level support.",
+                        "Upgrades & Problem Resolution: Supported installation upgrades and resolved technical problems related to performance, security, and other product concerns.",
+                        "Troubleshooting & Workarounds: Effectively identified, replicated, and developed solutions for client issues, documenting and communicating results to clients and Corporate Development.",
+                        "Database Expertise: Delivered advanced technical expertise for standard database applications, including MS Access, Oracle, MySQL, MS SQL Server, and more.",
+                        "Lab Scenario Recreation: Gathered client databases and variables, recreating scenarios in a PC Lab environment to resolve complex database issues.",
+                        "Product Pilot Assistance: Assisted in new product pilots and rollouts to departments and clients, ensuring smooth transitions and implementation.",
+                        "Cross-Functional Liaison: Acted as a liaison between Implementation, Client Services, Management, and Corporate Support to resolve high-impact problems swiftly and effectively.",
+                        "Training Development: Identified department training needs, assisting in the creation of training development programs.",
+                        "Team Leadership: Served as team leader in the manager's absence, prioritizing critical issues, providing direction, and ensuring timely, effective client support.",
+                        "Technical Proficiency: Developed expertise across networks, operating systems, hardware, software, databases, browsers, and related technologies.",
+                        "Documentation Creation: Supported product enhancements by developing internal documentation for new features and procedures."
+                    ]
+                },
+                {
+                    "position": "Connection Services Specialist",
+                    "startDate": "2008-05-01",
+                    "endDate": "2012-02-01",
+                    "highlights": [
+                        "Technical Support: Collaborated with team members to provide solutions and answer inquiries regarding ADP HR/Benefits Solution, ADP Payroll products, Microsoft products, and other related software packages for the National HR & Benefit Services client base.",
+                        "Data File Delivery: Maintained delivery of data files in formats like XML, JSON, ANSI 834 4010/5010, CSV, and Tab Delimited to ensure precise employee-level benefit plan enrollment.",
+                        "Client Communication: Fostered effective communication with ADP clients to ensure satisfaction and improvements in client retention.",
+                        "Troubleshooting & Workarounds: Troubleshot and replicated client issues, developing workarounds and providing efficient resolutions.",
+                        "Training & Procedure Recommendations: Assisted in training initiatives, recommending new procedures and methods to enhance team performance.",
+                        "HRB Extend API Support: Implemented and troubleshot HRB Extend API for alternative data transfer methods, leveraging knowledge of WSDL files and XML data transfers.",
+                        "OpenSSL Utilization: Used OpenSSL to confirm the correct format and encryption level of Certificates and Certificate Signing Requests.",
+                        "Web Services Training: Provided extensive training for Web Services support team members and assisted in resolving service cases.",
+                        "Documentation Management: Actively maintained documentation for client support, including troubleshooting tips, error resolution strategies, and FAQs regarding API capabilities."
+                    ]
+                },
+                {
+                    "position": "HRIS Support Specialist",
+                    "startDate": "2007-04-01",
+                    "endDate": "2008-05-01",
+                    "highlights": [
+                        "Consulting Expertise: Provided expert consultancy to service ADP's HR & Benefits products and technologies, delivering solutions tailored to client needs.",
+                        "Problem-Solving: Leveraged broad expertise to identify and resolve client problems, delivering effective and innovative solutions with direction.",
+                        "Product Mastery: Developed and maintained deep knowledge of ADP's products and services to address client questions, exceed expectations, and showcase the value of ADP's offerings.",
+                        "Recommendations to Leadership: Provided insights and recommendations to ADP leadership on best practices and training opportunities, informed by client input and personal experience."
                     ]
                 }
             ]
         },
         {
-            "name": "StartUp Labs",
-            "position": "Junior Developer",
-            "url": "https://startuplabs.example.com",
-            "startDate": "2015-08-01",
-            "endDate": "2017-05-31",
-            "summary": "Contributed to various web development projects in a fast-paced startup environment.",
+            "name": "CEVA Logistics",
+            "position": "Import Operations Assistant II",
+            "url": "https://www.cevalogistics.com",
+            "startDate": "2000-01-01",
+            "endDate": "2007-01-01",
             "highlights": [
-                "Developed responsive web applications using Angular and React",
-                "Created automated deployment scripts reducing deployment errors by 80%",
-                "Participated in agile development process and daily standups"
+                "Document Scanning: Scanned import documentation for Nike using Accent Capture software while adhering to strict quality standards and accuracy.",
+                "Data Indexing: Indexed documents into a web-based database for customer review and utilized an AS/400 system for updates and shipment queries.",
+                "System Maintenance: Performed routine maintenance on Kodak 3500 Scanner and created sales and marketing presentations on product capabilities.",
+                "Manual Development: Authored the scanning system manual, ensured updates aligned with ISO procedures, and maintained instructional guides to enable seamless operations during absences.",
+                "Troubleshooting Support: Updated troubleshooting guides based on evolving challenges and queries from coworkers.",
+                "File Storage Management: Managed warehouse file storage spanning five years, rotating files from the main office as space limitations arose."
             ]
         },
-		{
-            "name": "Another StartUp Labs",
-            "position": "Junior Developer 2",
-            "url": "https://startuplabs.example.com",
-            "startDate": "2013-08-01",
-            "endDate": "2015-05-31",
-            "summary": "two Contributed to various web development projects in a fast-paced startup environment.",
+        {
+            "name": "Burnham Services Corp",
+            "position": "NCR Corporate Account Lead",
+            "startDate": "1998-01-01",
+            "endDate": "2000-01-01",
             "highlights": [
-                "Developed responsive web applications using Angular and React",
-                "Created automated deployment scripts reducing deployment errors by 80%",
-                "Participated in agile development process and daily standups"
+                "Customer Relationship Management: Established and maintained working relationships with NCR technicians to better address customer needs and requirements.",
+                "Task Coordination: Managed daily operations based on customer needs, coordinating work crews to ensure efficient fulfillment.",
+                "Shipping & Receiving: Utilized the AS/400 program and Microsoft software (Word, Excel, Access) to manage shipping and receiving processes.",
+                "Equipment Operation: Operated forklifts, palletized boxes, and loaded trailers to streamline logistical operations.",
+                "On-Call Support: Provided after-hours paging services for technicians to address urgent or unexpected situations."
+            ]
+        },
+        {
+            "name": "NCR Corporation",
+            "position": "Logistics Associate",
+            "startDate": "1996-01-01",
+            "endDate": "1998-01-01",
+            "highlights": [
+                "Shipping & Receiving: Utilized various computer programs, including Microsoft Win95, Excel, and Access, to manage shipping and receiving operations.",
+                "Training & Certifications: Completed HAZMAT and EH&S training to ensure compliance with safety standards.",
+                "Forklift Operations & Inventory Control: Conducted forklift operations, maintained inventory control, and audited stock for accuracy.",
+                "MSDS Management: Prepared and maintained Material Safety Data Sheets (MSDS) and participated in training sessions.",
+                "Palletizing & Trailer Loading: Efficiently palletized boxes and loaded trailers for transport.",
+                "Foam-in-Place Equipment: Operated foam-in-place chemical equipment for specialized packaging needs."
             ]
         }
     ],
@@ -109,20 +233,21 @@
     ],
     "education": [
         {
-            "institution": "University of California, Berkeley",
-            "url": "https://berkeley.edu",
-            "area": "Computer Science",
-            "studyType": "Bachelor of Science",
+            "institution": "Washington State University",
+            "url": "https://wsu.edu",
+            "area": "Management Information Systems",
+            "studyType": "Bachelor of Arts",
             "startDate": "2011-09-01",
             "endDate": "2015-05-31",
-            "score": "3.8",
-            "courses": [
-                "Data Structures & Algorithms",
-                "Database Systems",
-                "Software Engineering",
-                "Machine Learning",
-                "Web Development"
-            ]
+            "courses": []
+        },
+		{
+            "institution": "ITT Technical Institute",
+            "area": "Computer Information Sciences",
+            "studyType": "Associate of Arts",
+            "startDate": "2001-01-01",
+            "endDate": "2003-01-01",
+            "courses": []
         }
     ],
     "awards": [],
@@ -165,7 +290,7 @@
                 "CSS3",
                 "Sass",
                 "Webpack",
-				"Grunt"
+                "Grunt"
             ]
         },
         {
@@ -182,7 +307,7 @@
             "name": "Database & Cloud",
             "level": "Advanced",
             "keywords": [
-				"MySql/MariaDB",
+                "MySql/MariaDB",
                 "PostgreSQL",
                 "MongoDB",
                 "Redis",
@@ -199,78 +324,57 @@
                 "CodeIgniter",
                 "Phalcon",
                 "CakePHP",
-				"Laravel", 
-				"Symfony",
-				"Joomla",
-				"WordPress",
-				"Blogger"
+                "Laravel",
+                "Symfony",
+                "Joomla",
+                "WordPress",
+                "Blogger"
             ]
         }
     ],
-    "languages": [
-        {
-            "language": "English",
-            "fluency": "Native speaker"
-        }
-    ],
+    "languages": [],
     "interests": [
         {
-            "name": "Open Source",
-            "keywords": [
-                "Contributing to React",
-                "Maintaining npm packages"
-            ]
+            "name": "Open Source"
         },
         {
-            "name": "Tech Speaking",
-            "keywords": [
-                "Conference presentations",
-                "Workshop facilitation"
-            ]
+            "name": "Gaming"
         },
         {
-            "name": "Machine Learning",
-            "keywords": [
-                "TensorFlow",
-                "Neural Networks"
-            ]
+            "name": "Cycling"
         },
         {
-            "name": "Photography",
-            "keywords": [
-                "Landscape",
-                "Street photography"
-            ]
+            "name": "Hiking"
+        },
+		{
+            "name": "Snowboarding"
+        },
+		{
+            "name": "Cooking"
+        },
+		{
+            "name": "Travel"
         }
+		
     ],
-    "references": [
-        {
-            "name": "Michael Chen - CTO at TechCorp Solutions",
-            "reference": "Sarah is an exceptional developer who consistently delivers high-quality code. Her ability to architect scalable solutions and mentor team members makes her an invaluable asset. I highly recommend her for any senior development position."
-        },
-        {
-            "name": "Emily Rodriguez - Product Manager at Digital Innovations",
-            "reference": "Working with Sarah was a pleasure. She has a unique ability to translate complex technical concepts into business value. Her problem-solving skills and attention to detail are outstanding."
-        }
-    ],
+    "references": [],
     "projects": [
         {
-            "name": "DevMetrics Dashboard",
-            "description": "Real-time analytics dashboard for tracking development team productivity and code quality metrics",
-            "highlights": [
-                "Built with React, D3.js, and Node.js",
-                "Processes 1M+ events daily using Apache Kafka",
-                "Reduced bug detection time by 40%"
-            ],
+            "name": "Hono Authentication",
+            "description": "Developed and currently maintain a Hono Framework based application (HonoShield) which aims to simplify developing user authentication applications in the Cloudflare workers space. Site visitors are able to register, login/logout, and modify their user records.",
+            "highlights": [],
             "keywords": [
-                "React",
-                "D3.js",
-                "Kafka",
-                "PostgreSQL"
+                "JavaScript",
+                "Hono",
+                "NPM",
+                "Cloudflare",
+				"Wrangler",
+				"Github"
+			
             ],
-            "startDate": "2022-01-01",
+            "startDate": "2024-01-01",
             "endDate": "2022-06-30",
-            "url": "https://github.com/sjohnson/devmetrics",
+            "url": "https://honoshield.cdndev.io",
             "roles": [
                 "Lead Developer",
                 "Architect"
@@ -279,28 +383,88 @@
             "type": "application"
         },
         {
-            "name": "CodeReview AI",
-            "description": "AI-powered code review assistant that automatically detects potential bugs and suggests improvements",
-            "highlights": [
-                "Integrated with GitHub and GitLab",
-                "Uses machine learning to identify code patterns",
-                "Adopted by 50+ development teams"
-            ],
+            "name": "Stripe Payments Plugin",
+            "description": "Created a repository demonstrates how to integrate Stripe Payments with Cloudflare Workers using KV storage for securely managing keys, and submitting transactions to Resellerclub. It includes both the front-end (payment form with Stripe Elements) and back-end logic (payment intent creation, checksum generation, and form submission).",
+            "highlights": [],
             "keywords": [
-                "Python",
-                "TensorFlow",
-                "FastAPI",
-                "Docker"
+                "JavaScript",
+                "Github",
+				"Cloudflare",
+				"Wrangler",
+                "ResellerClub"
             ],
-            "startDate": "2021-03-01",
-            "endDate": "2021-12-31",
-            "url": "https://codereview-ai.com",
+            "startDate": "2024-09-01",
+            "url": "https://github.com/JamesShaver/stripepayments",
             "roles": [
-                "Co-founder",
-                "Technical Lead"
+                "Lead Developer",
+                "Architect"
             ],
-            "entity": "Startup",
+            "entity": "Open Source",
             "type": "application"
+        },
+		{
+            "name": "Joomla Development",
+            "description": "Working on a component/module/plugin combination to create a Joomla platform for white-label web hosting and domain name sales through a REST API backend service, as well utilizing a payment gateway library to handle sales.",
+            "highlights": [],
+            "keywords": [
+				"Joomla",
+                "PHP",
+                "MySql",
+				"Apache",
+				"Nginx",
+				"HTML",
+				"Visual Studio Code",
+				"REST API",
+				"Postman",
+				"Github",
+                "ResellerClub"
+            ],
+            "startDate": "2001-09-01",
+            "roles": [
+                "Lead Developer",
+                "Architect"
+            ],
+            "entity": "Open Source",
+            "type": "application"
+        },
+		{
+            "name": "Family Blogs",
+            "description": "Developed and maintained themes and plugins for our family's self-hosted Wordpress blogs.",
+            "highlights": [],
+            "keywords": [
+				"WordPress",
+                "PHP",
+                "MySql",
+				"Apache",
+				"Nginx",
+				"HTML",
+				"Visual Studio Code",
+				"Github"
+            ],
+            "startDate": "2005-01-01",
+            "roles": [
+                "Lead Developer",
+                "Architect"
+            ],
+            "entity": "Open Source",
+            "type": "application"
+        },
+		{
+            "name": "Self-Learning CNC Routing",
+            "description": "Currently learning about 3D modeling and CNC routing with a tabletop CNC router and Fusion360 software",
+            "highlights": [],
+            "keywords": [
+				"Genmitsu CNC 3018-PRO Router",
+                "Autodesk Fusion 360",
+                "Gimp",
+				"Carbide Create",
+				"Inkscape"
+            ],
+            "startDate": "2023-01-01",
+            "roles": [
+                "Lead Developer",
+                "Architect"
+            ]
         }
     ],
     "meta": {

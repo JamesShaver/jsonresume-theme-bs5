@@ -1,0 +1,32 @@
+{{#if resume.certificates}}
+<!-- Certificates Section -->
+<section class="certificates-section mb-5" id="certificates">
+    <h2 class="section-title mb-4">
+        <i class="bi bi-patch-check-fill me-2"></i>
+        Certifications
+    </h2>
+    
+    <div class="row">
+        {{#each resume.certificates}}
+        <div class="col-md-6 mb-3">
+            <div class="certification-item">
+                <i class="bi bi-patch-check-fill text-success me-2"></i>
+                <strong>
+                    {{#if this.url}}
+                    <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                    {{else}}
+                    {{this.name}}
+                    {{/if}}
+                </strong>
+                {{#if this.issuer}}
+                <span class="text-muted ms-2">{{this.issuer}}</span>
+                {{/if}}
+                {{#if this.date}}
+                <span class="text-muted ms-2">({{formatDate this.date}})</span>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
+{{/if}}

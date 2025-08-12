@@ -1,0 +1,14 @@
+{{#if resume.languages}}
+<!-- Languages -->
+<div class="languages-section mt-4 px-3">
+    <h5 class="text-light mb-3">Languages</h5>
+    {{#each resume.languages}}
+    <div class="language-item mb-2">
+        <span class="text-light">{{this.language}}</span>
+        {{#if this.fluency}}
+        <span class="text-muted ms-2">{{this.fluency}}</span>
+        {{/if}}
+    </div>
+    {{/each}}
+</div>
+{{/if}}

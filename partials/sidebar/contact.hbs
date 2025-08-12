@@ -1,0 +1,35 @@
+{{#if resume.basics}}
+<!-- Contact Information -->
+<div class="contact-info text-start px-3">
+    {{#if resume.basics.email}}
+    <div class="contact-item mb-3">
+        <i class="bi bi-envelope-fill me-2"></i>
+        <a href="mailto:{{resume.basics.email}}" class="text-light text-decoration-none">{{resume.basics.email}}</a>
+    </div>
+    {{/if}}
+    
+    {{#if resume.basics.phone}}
+    <div class="contact-item mb-3">
+        <i class="bi bi-telephone-fill me-2"></i>
+        <a href="tel:{{resume.basics.phone}}" class="text-light text-decoration-none">{{phoneFormat resume.basics.phone}}</a>
+    </div>
+    {{/if}}
+    
+    {{#if resume.basics.location}}
+    <div class="contact-item mb-3">
+        <i class="bi bi-geo-alt-fill me-2"></i>
+        <span class="text-light">
+            {{#if resume.basics.location.city}}{{resume.basics.location.city}}{{/if}}{{#if resume.basics.location.region}}, {{resume.basics.location.region}}{{/if}}
+            {{#if resume.basics.location.countryCode}} {{resume.basics.location.countryCode}}{{/if}}
+        </span>
+    </div>
+    {{/if}}
+    
+    {{#if resume.basics.url}}
+    <div class="contact-item mb-3">
+        <i class="bi bi-globe me-2"></i>
+        <a href="{{resume.basics.url}}" class="text-light text-decoration-none" target="_blank">{{resume.basics.url}}</a>
+    </div>
+    {{/if}}
+</div>
+{{/if}}

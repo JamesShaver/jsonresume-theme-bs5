@@ -56,7 +56,30 @@ Handlebars.registerHelper('phoneFormat', function(phone) {
     return phone;
 });
 
+// Register partials
+function registerPartials() {
+    const partialsDir = path.join(__dirname, 'partials');
+    const partialDirs = ['layout', 'sidebar', 'sections'];
+    
+    partialDirs.forEach(dir => {
+        const dirPath = path.join(partialsDir, dir);
+        if (fs.existsSync(dirPath)) {
+            const files = fs.readdirSync(dirPath);
+            files.forEach(file => {
+                if (file.endsWith('.hbs')) {
+                    const name = `${dir}/${file.replace('.hbs', '')}`;
+                    const content = fs.readFileSync(path.join(dirPath, file), 'utf-8');
+                    Handlebars.registerPartial(name, content);
+                }
+            });
+        }
+    });
+}
+
 function render(resume) {
+    // Register partials
+    registerPartials();
+    
     // Load CSS file
     const css = fs.readFileSync(path.join(__dirname, 'style.css'), 'utf-8');
     

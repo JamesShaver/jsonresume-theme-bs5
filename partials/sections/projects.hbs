@@ -1,0 +1,44 @@
+{{#if resume.projects}}
+<!-- Projects Section -->
+<section class="projects-section mb-5" id="projects">
+    <h2 class="section-title mb-4">
+        <i class="bi bi-code-square me-2"></i>
+        Projects
+    </h2>
+    
+    <div class="row">
+        {{#each resume.projects}}
+        <div class="col-md-6 mb-3">
+            <div class="card project-card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{#if this.url}}
+                        <a href="{{this.url}}" target="_blank" class="text-decoration-none">{{this.name}}</a>
+                        {{else}}
+                        {{this.name}}
+                        {{/if}}
+                    </h5>
+                    {{#if this.description}}
+                    <p class="card-text">{{this.description}}</p>
+                    {{/if}}
+                    {{#if this.highlights}}
+                    <ul class="small">
+                        {{#each this.highlights}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    {{#if this.keywords}}
+                    <div class="project-tech">
+                        {{#each this.keywords}}
+                        <span class="badge bg-info me-1">{{this}}</span>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
+{{/if}}

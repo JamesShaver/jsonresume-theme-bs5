@@ -1,0 +1,39 @@
+<!-- Smart Fixed Navigation -->
+<nav id="smart-nav" class="smart-nav">
+    <button class="nav-trigger" aria-label="Toggle navigation">
+        <span class="nav-icon"></span>
+    </button>
+    <ul class="nav-menu">
+        <li class="nav-header">Quick Navigation</li>
+        {{#if resume.basics.summary}}
+        <li><a href="#summary" class="nav-link"><i class="bi bi-person-circle"></i> Summary</a></li>
+        {{/if}}
+        {{#if resume.work}}
+        <li><a href="#experience" class="nav-link"><i class="bi bi-briefcase-fill"></i> Experience</a></li>
+        {{/if}}
+        {{#if resume.volunteer}}
+        <li><a href="#volunteer" class="nav-link"><i class="bi bi-heart-fill"></i> Volunteer</a></li>
+        {{/if}}
+        {{#if resume.education}}
+        <li><a href="#education" class="nav-link"><i class="bi bi-mortarboard-fill"></i> Education</a></li>
+        {{/if}}
+        {{#if resume.projects}}
+        <li><a href="#projects" class="nav-link"><i class="bi bi-code-square"></i> Projects</a></li>
+        {{/if}}
+        {{#if resume.skills}}
+        <li><a href="#skills" class="nav-link"><i class="bi bi-gear-fill"></i> Skills</a></li>
+        {{/if}}
+        {{#if resume.awards}}
+        <li><a href="#awards" class="nav-link"><i class="bi bi-trophy-fill"></i> Awards</a></li>
+        {{/if}}
+        {{#if resume.certificates}}
+        <li><a href="#certificates" class="nav-link"><i class="bi bi-patch-check-fill"></i> Certificates</a></li>
+        {{/if}}
+        {{#if resume.publications}}
+        <li><a href="#publications" class="nav-link"><i class="bi bi-journal-text"></i> Publications</a></li>
+        {{/if}}
+        {{#if resume.references}}
+        <li><a href="#references" class="nav-link"><i class="bi bi-people-fill"></i> References</a></li>
+        {{/if}}
+    </ul>
+</nav>

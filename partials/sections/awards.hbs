@@ -1,0 +1,29 @@
+{{#if resume.awards}}
+<!-- Awards Section -->
+<section class="awards-section mb-5" id="awards">
+    <h2 class="section-title mb-4">
+        <i class="bi bi-trophy-fill me-2"></i>
+        Awards & Achievements
+    </h2>
+    
+    <div class="row">
+        {{#each resume.awards}}
+        <div class="col-md-6 mb-3">
+            <div class="award-item">
+                <i class="bi bi-award-fill text-warning me-2"></i>
+                <strong>{{this.title}}</strong>
+                {{#if this.awarder}}
+                <span class="text-muted ms-2">by {{this.awarder}}</span>
+                {{/if}}
+                {{#if this.date}}
+                <span class="text-muted ms-2">({{formatDate this.date}})</span>
+                {{/if}}
+                {{#if this.summary}}
+                <p class="mt-1 mb-0 small">{{this.summary}}</p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
+{{/if}}

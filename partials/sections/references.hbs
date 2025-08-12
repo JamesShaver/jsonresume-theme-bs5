@@ -1,0 +1,22 @@
+{{#if resume.references}}
+<!-- References Section -->
+<section class="references-section mb-5" id="references">
+    <h2 class="section-title mb-4">
+        <i class="bi bi-people-fill me-2"></i>
+        References
+    </h2>
+    
+    <div class="row">
+        {{#each resume.references}}
+        <div class="col-md-6 mb-3">
+            <div class="card reference-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.reference}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
+{{/if}}
