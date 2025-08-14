@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Handlebars = require('handlebars');
+const { minify } = require('html-minifier-next');
 
 // Register Handlebars helpers
 Handlebars.registerHelper('formatDate', function(dateString) {
@@ -76,24 +77,33 @@ function registerPartials() {
     });
 }
 
-function render(resume) {
+async function render(resume) {
     // Register partials
     registerPartials();
-    
+
     // Load CSS file
     const css = fs.readFileSync(path.join(__dirname, 'assets/css/style.css'), 'utf-8');
-    
+
     // Load template
     const template = fs.readFileSync(path.join(__dirname, 'resume.hbs'), 'utf-8');
-    
+
     // Compile template
     const compiledTemplate = Handlebars.compile(template);
-    
+
     // Render HTML with resume data
-    return compiledTemplate({
+    const html = compiledTemplate({
         css: css,
         resume: resume
     });
+
+    // Minify HTML output
+    const minified = await minify(html, {
+        collapseWhitespace: true,
+        removeComments: true,
+        minifyCSS: true,
+        minifyJS: true
+    });
+    return minified;
 }
 
 module.exports = {
